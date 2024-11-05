@@ -2,11 +2,11 @@ import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import {db} from '@/drizzle/index'; 
 import { UsersTable,SessionsTable } from '@/drizzle/schema';
-import { use } from 'react';
-import { eq, lt, gte, ne } from 'drizzle-orm';
+// import { use } from 'react';
+import { eq} from 'drizzle-orm';
 
-const GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID!;
-const GOOGLE_CLIENT_SECRET=process.env.GOOGLE_CLIENT_SECRET!;
+// const GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID!;
+// const GOOGLE_CLIENT_SECRET=process.env.GOOGLE_CLIENT_SECRET!;
 
 const authOptions: NextAuthOptions = {
   secret:process.env.NEXTAUTH_SECRET,
@@ -41,7 +41,7 @@ const authOptions: NextAuthOptions = {
       }
       return true;
     },
-    async session({  session, user, token }) {
+    async session({  session, token }) {
       // Attach the user ID to the session object
       console.log('This is session :: ::::')
       console.log(session)
@@ -79,7 +79,7 @@ const authOptions: NextAuthOptions = {
       console.log(token)
       return token;
     },
-    async redirect({ url, baseUrl }) {
+    async redirect({ url}) {
       console.log('redirect called')
       url="http://localhost:3000/"
       return url;
