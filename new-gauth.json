@@ -1,0 +1,16 @@
+{
+    "web": {
+        "client_id": "803819721158-069oa8n8mseeba6phfjql191bcpr0ujd.apps.googleusercontent.com",
+        "project_id": "smart-amplifier-440800-a6",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "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",
+        "redirect_uris": [
+            "http://localhost:3000/api/auth/callback/google"
+        ],
+        "javascript_origins": [
+            "http://localhost:3000"
+        ]
+    }
+}
