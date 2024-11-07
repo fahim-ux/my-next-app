@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import { SessionProvider } from "next-auth/react";
+import Providers from "./components/Providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,13 +26,15 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers >
         <header>
-          <h1>Welcome to My App</h1>
+          <Navbar/>
         </header>
         {children}
         <footer>
           <p>© 2024 My App</p>
         </footer>
+        </Providers>
       </body>
     </html>
   );
