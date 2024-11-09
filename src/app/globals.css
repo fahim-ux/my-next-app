@@ -28,5 +28,29 @@ body {
 }
 
 
+.auth-button{
+  @apply font-robotoMono text-[1.4rem]  font-medium hover:text-gray-600 mx-5;
+}
 
+.set-link{
+  @apply auth-button p-2 flex justify-center items-center;
+}
 
+.footer-link{
+  @apply font-iceland text-[2rem] text-gray-600 hover:text-black cursor-pointer;
+}
+.footer-copyright{
+  @apply font-consolas text-[1.3rem] text-gray-600 hover:text-black h-[5rem] w-full bg-white flex justify-center items-center p-3 border-t-2 border-black;
+}
+
+.sidebar-close{
+  @apply w-[20vw] h-[100vh] bg-white text-black p-3 overflow-hidden fixed left-[-20vw] transition-all duration-300;
+}
+
+.sidebar-link{
+  @apply font-robotoMono rounded-[0.4rem] flex flex-row justify-start items-center p-3 text-[1.4rem]  text-gray-600 flex flex-row justify-start items-center gap-4 hover:text-black cursor-pointer hover:bg-slate-50;
+}
+
+.sidebar-open{
+  @apply w-[20vw] h-[100vh] bg-white text-black p-3 overflow-hidden transition-all duration-300  sticky left-0 ;
+}
