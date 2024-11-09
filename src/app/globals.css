@@ -29,7 +29,7 @@ body {
 
 
 .auth-button{
-  @apply font-robotoMono text-[1.4rem]  font-medium hover:text-gray-600 mx-5;
+  @apply font-robotoMono text-[1.2rem]  font-medium hover:text-gray-600 mx-5;
 }
 
 .set-link{
@@ -37,7 +37,7 @@ body {
 }
 
 .footer-link{
-  @apply font-iceland text-[2rem] text-gray-600 hover:text-black cursor-pointer;
+  @apply font-iceland text-[1.8rem] text-gray-600 hover:text-black cursor-pointer;
 }
 .footer-copyright{
   @apply font-consolas text-[1.3rem] text-gray-600 hover:text-black h-[5rem] w-full bg-white flex justify-center items-center p-3 border-t-2 border-black;
@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar-link{
-  @apply font-robotoMono rounded-[0.4rem] flex flex-row justify-start items-center p-3 text-[1.4rem]  text-gray-600 flex flex-row justify-start items-center gap-4 hover:text-black cursor-pointer hover:bg-slate-50;
+  @apply font-robotoMono rounded-[0.4rem] flex flex-row justify-start items-center p-3 text-[1.2rem]  text-gray-600 flex flex-row justify-start items-center gap-4 hover:text-black cursor-pointer hover:bg-slate-50;
 }
 
 .sidebar-open{
