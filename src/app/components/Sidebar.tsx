@@ -16,7 +16,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({isOpen}) => {
     const str = isOpen ? "sidebar-open" : "sidebar-close";
     return (
-        <div className={`${str} flex flex-col gap-3 justify-start`}>
+        <div className={`${str} flex flex-col gap-3 justify-start z-10`}>
             <div className="p-3  flex flex-col gap-2">
                 <div className="sidebar-link"> 
                     <FcDisplay className="mr-2 " size={20}/>
