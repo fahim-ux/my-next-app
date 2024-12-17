@@ -3,6 +3,7 @@
 
 import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import GithubProvider from 'next-auth/providers/github';
 import { db } from '@/drizzle/index';
 import { UsersTable, SessionsTable } from '@/drizzle/schema';
 import { eq } from 'drizzle-orm';
@@ -17,6 +18,10 @@ const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!, // Ensure this is set in your .env file
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!, // Ensure this is set in your .env file
+    }),
+    GithubProvider({
+      clientId: process.env.GITHUB_CLIENT_ID!, // Ensure this is set in your .env file
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!, // Ensure this is set in your .env file
     }),
   ],
 
@@ -35,7 +40,7 @@ const authOptions: NextAuthOptions = {
       console.log('Sign In Callback Triggered');
 
       // Only process Google provider sign-ins
-      if (account && account.provider === 'google') {
+      if (account && account.provider === 'google' || account?.provider === 'github') {
         try {
           // Check if the user already exists in the UsersTable
           const existingUser = await db

@@ -1,5 +1,5 @@
 // src/drizzle/schema.ts
-import { pgTable, serial, text, timestamp, uniqueIndex } from 'drizzle-orm/pg-core';
+import { pgTable, serial, text, timestamp, uniqueIndex,integer } from 'drizzle-orm/pg-core';
 
 export const UsersTable = pgTable(
   'users',
@@ -29,14 +29,27 @@ export const SessionsTable = pgTable(
 );
 
 
-export const FolksTable = pgTable(
-  'folks',
+export const UserDetailsTable = pgTable(
+  'user_details',
   {
     id: serial('id').primaryKey(), // Unique identifier for each user
-    name: text('name').notNull(), // User's name, required
-    email: text('email').unique().notNull(), // Unique user email, required
-    createdAt: timestamp('createdAt').defaultNow().notNull(), // Auto-populated creation timestamp
+    fullName: text('full_name').notNull(), // Full name of the user
+    email: text('email').unique().notNull(), // Unique user email
+    phone: text('phone'), // Optional phone number
+    createdAt: timestamp('created_at').defaultNow().notNull(), // When the user registered
   },
 );
+
+export const UserCredentialsTable = pgTable(
+  'user_credentials',
+  {
+    id: serial('id').primaryKey(), // Unique identifier for each record
+    username: text('username').unique().notNull(), // Unique username for login
+    password: text('password').notNull(), // Hashed password
+    userId: integer('user_id').references(() => UserDetailsTable.id).notNull(), // FK referencing UserDetails
+    createdAt: timestamp('created_at').defaultNow().notNull(), // When the user registered
+  },
+);
+
 
 
