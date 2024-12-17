@@ -27,19 +27,15 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex justify-between  text-xl ">
-        <button
-            onClick={() => signIn("google")}
-            className=" auth-button"
-            aria-label="Sign In"
-          >
-            Sign In
-          </button>
+        <div className="set-link">
+            <Link href="api/choose">SignIn</Link>
+          </div>
           <button
               onClick={() => signOut()}
               className="auth-button"
               aria-label="Sign Out"
             >
-              Sign Out
+              SignOut
           </button>
           <div className="set-link">
             <Link href="api/Schedule">Schedule</Link>
