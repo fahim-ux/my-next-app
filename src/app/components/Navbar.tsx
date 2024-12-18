@@ -20,10 +20,10 @@ export default function Navbar() {
 
   return (
     <>
-    <nav className="navbar bg-white text-black flex flex-row justify-between items-center px-4 h-20 border-b-[0.1rem] border-black">
+    <nav className="navbar bg-navbar-gradient text-white flex flex-row justify-between items-center px-4 h-20 border-b-[0.1rem] border-gray-400">
         <div className=" flex justify-between max-w-fit items-center p-2">
           <div className="cursor-pointer">
-            <Image src="/images/gg-icon.png" alt="logo" width={100} height={80} className="" onClick={toggleSidebar}/>
+            <Image src="/images/gg-icon-dark.png" alt="logo" width={100} height={80} className="" onClick={toggleSidebar}/>
           </div>
         </div>
         <div className="flex justify-between  text-xl ">
