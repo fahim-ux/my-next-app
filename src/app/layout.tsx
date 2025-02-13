@@ -45,13 +45,13 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} ${consolas.variable} ${iceland.variable} antialiased`}>
         <header>
-          <Navbar/>
+          {/* <Navbar/> */}
         </header>
         <Providers >
         {children}
         </Providers>
         <footer>
-          <Footer/>
+          {/* <Footer/> */}
         </footer>
       </body>
     </html>

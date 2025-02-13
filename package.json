@@ -13,6 +13,7 @@
     "@vercel/postgres": "^0.10.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.35.2",
+    "gsap": "^3.12.5",
     "next": "14.2.15",
     "next-auth": "^4.24.8",
     "react": "^18",
