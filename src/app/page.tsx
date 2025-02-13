@@ -34,7 +34,7 @@ export default function Page() {
         <Link href="https://github.com/fahim-ux" target="_blank" rel="noopener noreferer">@fahim-ux</Link>
         </div>
       </div>
-      <div className="p-4 bg-[#FFF4B7] flex  relative" >
+      {/* <div className="p-4 bg-[#FFF4B7] flex  relative" >
         
         <Image  src="/images/1.png" alt="hero" width={1748} height={1240} />
       </div>
@@ -43,7 +43,7 @@ export default function Page() {
       </div>
       <div>
         <Image  src="/images/4.png" alt="hero" width={1748} height={1240} />
-      </div>
+      </div> */}
     </div>                     
     </>
   )

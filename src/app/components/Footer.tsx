@@ -4,7 +4,7 @@ export default function Footer ()
 {
     return (
         <footer>
-        <div className="footer flex flex-row h-fit bg-[#0B2447] text-white p-3 justify-start font-robotoMono gap-4 border-t-2 border-gray-400">
+        <div className="footer flex flex-row h-fit bg-white text-black p-3 justify-start font-robotoMono gap-4 border-t-2 border-gray-400">
             <div className="company-info  flex flex-col max-w-[38rem] h-fit gap-5 p-3 overflow-hidden w-fit">
                 <div className="logo-name flex flex-row justify-start items-center  gap-2 w-fit">
                     <Image src="/images/gg-icon.png" alt="logo" width={100} height={80} />
@@ -13,7 +13,7 @@ export default function Footer ()
                 <p className="vision text-xl">
                     Our vision is to create a global community of developers who can learn and grow together.
                 </p>
-                <p className="license font-consolas bg-[#03346E] rounded-[6px] p-1 max-w-[22rem] pl-2">
+                <p className="license font-consolas bg-white rounded-[6px] p-1 max-w-[22rem] pl-2">
                     Code licensed NIT, docs CC BY 3.0.
                 </p>
             </div>
