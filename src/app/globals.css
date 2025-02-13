@@ -40,7 +40,7 @@ body {
   @apply font-iceland text-[1.8rem] text-gray-400 hover:text-[#F4F6FF] cursor-pointer;
 }
 .footer-copyright{
-  @apply font-consolas text-[1.3rem] text-gray-400 hover:text-[#F4F6FF] h-[5rem] w-full bg-[#0B2447] flex justify-center items-center p-3 border-t-2 border-gray-400;
+  @apply font-consolas text-[1.3rem] text-gray-400 hover:text-[#F4F6FF] h-[5rem] w-full bg-white flex justify-center items-center p-3 border-t-2 border-gray-400;
 }
 
 .sidebar-close{
